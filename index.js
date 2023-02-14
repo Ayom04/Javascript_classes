@@ -25,3 +25,4 @@ console.log(division)
 console.log(modulus)
 
 console.log(5)
+console.log("Hello world" )
