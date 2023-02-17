@@ -28,7 +28,7 @@ function tellFortune(jobTitle, location, partnersName, noOfChildren) {
 
 function calculateDogAge(humanAge){
     let dogAge = humanAge / 7
-    return dogAge
+    return output = "Your dog's age is " + dogAge
 }
 console.log (calculateDogAge(21))
 console.log (calculateDogAge(35))
@@ -46,8 +46,7 @@ console.log (calculateDogAge(7))
 
 function calculateSupply(age ,  amountPerDay){
 let output = age * amountPerDay
-let result = "You will need " + "$" + output + " to last you until the ripe old age of "  + age
-return result
+return result = "You will need " + "$" + output + " to last you until the ripe old age of "  + age
 }
 console.log(calculateSupply(32, 700))
 console.log(calculateSupply(54, 100))
@@ -64,7 +63,7 @@ console.log(calculateSupply(65, 7000))
 // Calculate the area based on the radius and output. "The area is NN."
 function calcCircumfrence(radius){
     let circumference = 2 * 3.14 * radius
-    return circumference
+    return output = "The circumference is " + circumference
 }
 console.log(calcCircumfrence(10))
 console.log(calcCircumfrence(7))
@@ -72,11 +71,11 @@ console.log(calcCircumfrence(12))
 
 function calcArea(radius){
     let area = radius *radius * 3.14 
-    return area
+    return output = "Your Area is " + area 
 }
 console.log(calcArea(10))
-console.log(calcCircumfrence(7))
-console.log(calcCircumfrence(12))
+console.log(calcArea(7))
+console.log(calcArea(12))
 
 // 5. The Temperature Converter
 
@@ -86,9 +85,9 @@ console.log(calcCircumfrence(12))
 
 // Store a celsius temperature into a variable.
 // Convert it to fahrenheit and output "NN°C is NN°F".
-function celsiusToFahrenheit(x){
-    let fahrenheit = x * 9/5 + 32
-    return fahrenheit
+function celsiusToFahrenheit(celsius){
+    let fahrenheit = celsius * 9/5 + 32
+    return output = celsius + "°C is " + fahrenheit + "°F"
 }
 console.log(celsiusToFahrenheit(0))
 console.log(celsiusToFahrenheit(38))
@@ -96,9 +95,9 @@ console.log(celsiusToFahrenheit(45))
 
 
 // Create another function called fahrenheitToCelsius:
-function fahrenheitToCelsius(x){
-    let celsius = (x-32) * 5/9
-    return celsius
+function fahrenheitToCelsius(fahrenheit){
+    let celsius = (fahrenheit-32) * 5/9
+    return output =  fahrenheit + "°F is " + celsius + "°C"
 }
 console.log(fahrenheitToCelsius(32))
 console.log(fahrenheitToCelsius(64))
