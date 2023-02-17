@@ -26,13 +26,13 @@ function tellFortune(jobTitle, location, partnersName, noOfChildren) {
 // outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
 // Call the function three times with different sets of values.
 
-function calculateDogAge(humanAge){
-    let dogAge = humanAge / 7
-    return output = "Your dog's age is " + dogAge
+function calculateDogAge(puppyAge){
+    let dogAge =  7 * puppyAge
+    return output = "Your dog's age is " + dogAge + "years old in dog years!"
 }
-console.log (calculateDogAge(21))
-console.log (calculateDogAge(35))
+console.log (calculateDogAge(3))
 console.log (calculateDogAge(7))
+console.log (calculateDogAge(1))
 
 // 3. The Lifetime Supply Calculator
 
