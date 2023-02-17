@@ -46,7 +46,11 @@ console.log (calculateDogAge(1))
 
 function calculateSupply(age ,  amountPerDay){
 let output = age * amountPerDay
-return result = "You will need " + "$" + output + " to last you until the ripe old age of "  + age
+let deathAge = 60
+let reaminingAge = deathAge - age
+let remainingDays = reaminingAge * 365
+let supplyNeeded = remainingDays * amountPerDay
+return "You will need " + supplyNeeded + " supply"
 }
 console.log(calculateSupply(32, 700))
 console.log(calculateSupply(54, 100))
@@ -87,7 +91,7 @@ console.log(calcArea(12))
 // Convert it to fahrenheit and output "NN°C is NN°F".
 function celsiusToFahrenheit(celsius){
     let fahrenheit = celsius * 9/5 + 32
-    return output = celsius + "°C is " + fahrenheit + "°F"
+    return celsius + "°C is " + fahrenheit + "°F"
 }
 console.log(celsiusToFahrenheit(0))
 console.log(celsiusToFahrenheit(38))
@@ -97,7 +101,7 @@ console.log(celsiusToFahrenheit(45))
 // Create another function called fahrenheitToCelsius:
 function fahrenheitToCelsius(fahrenheit){
     let celsius = (fahrenheit-32) * 5/9
-    return output =  fahrenheit + "°F is " + celsius + "°C"
+    return   fahrenheit + "°F is " + celsius + "°C"
 }
 console.log(fahrenheitToCelsius(32))
 console.log(fahrenheitToCelsius(64))
