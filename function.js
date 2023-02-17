@@ -9,8 +9,8 @@
 // Where X is the job title , Y is the location , Z is the partners name, and N is the number of children
 
 // Call that function 3 times with 3 different values for the arguments.
-function tellFortune(x, y, z, n) {
-    let work = "You will be a " + x + " at "+ y + " .You will be married to "+ z + " with " + n +" children"
+function tellFortune(jobTitle, location, partnersName, noOfChildren) {
+    let work = "You will be a " + jobTitle + " at "+ location + " .You will be married to "+ partnersName + " with " + noOfChildren +" children"
     return work 
   }
   console.log (tellFortune("software developer", "maryland", "Elizabeth", 7))
@@ -26,8 +26,8 @@ function tellFortune(x, y, z, n) {
 // outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
 // Call the function three times with different sets of values.
 
-function calculateDogAge(x){
-    let dogAge = x / 7
+function calculateDogAge(humanAge){
+    let dogAge = humanAge / 7
     return dogAge
 }
 console.log (calculateDogAge(21))
@@ -46,7 +46,8 @@ console.log (calculateDogAge(7))
 
 function calculateSupply(age ,  amountPerDay){
 let output = age * amountPerDay
-return output
+let result = "You will need " + "$" + output + " to last you until the ripe old age of "  + age
+return result
 }
 console.log(calculateSupply(32, 700))
 console.log(calculateSupply(54, 100))
@@ -61,17 +62,22 @@ console.log(calculateSupply(65, 7000))
 
 // Pass the radius to the function.
 // Calculate the area based on the radius and output. "The area is NN."
-function calcCircumfrence(d){
-    let circumference = 3.14 * d
+function calcCircumfrence(radius){
+    let circumference = 2 * 3.14 * radius
     return circumference
 }
 console.log(calcCircumfrence(10))
- 
-function calcArea(r){
-    let area = r *r * 3.14 
+console.log(calcCircumfrence(7))
+console.log(calcCircumfrence(12))
+
+function calcArea(radius){
+    let area = radius *radius * 3.14 
     return area
 }
 console.log(calcArea(10))
+console.log(calcCircumfrence(7))
+console.log(calcCircumfrence(12))
+
 // 5. The Temperature Converter
 
 // It's hot out! Let's make a converter based on the steps here.
