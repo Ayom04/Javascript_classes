@@ -99,9 +99,9 @@ console.log(remainder(-9,45))
 function returnNegative(positivenum){
     return positivenum * -1
 }
-console.log(givemeNegative(4))
-console.log(givemeNegative(15))
-console.log(givemeNegative(0))
+console.log(returnNegative(4))
+console.log(returnNegative(15))
+console.log(returnNegative(0))
 
 // 9. String and Number Conversions
 // Write a function that takes a string and returns it as an integer.
