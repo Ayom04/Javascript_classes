@@ -26,3 +26,11 @@ console.log(modulus)
 
 console.log(5)
 console.log("Hello world" )
+
+// Literal template or String Interpolation
+
+function salary(monthlySalary){
+    return `Your monthly salary is ${monthlySalary}`
+    
+    }
+    console.log(salary(200000))
