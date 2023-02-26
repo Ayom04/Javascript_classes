@@ -153,7 +153,7 @@ console.log(numberArgs())
 // wordCharWord("R", "javascript is fun") ➞ "R javascript is fun R"
 // wordCharWord("#", "hello world!") ➞ "# hello world! #"
 // wordCharWord("his", "lets jump on code ") ➞ "# lets jump on code #"
-function charWordChar(character, word, character){
+function charWordChar(character, word){
     return character + word + character
 }
 console.log(charWordChar("R", " javascript is fun ", " R"))
