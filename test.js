@@ -15,13 +15,6 @@
 
 
 
-
-
-
-
-
-
-
 // function getMiddle(s)
 // {
 //   const i = Math.floor(s.length / 2);

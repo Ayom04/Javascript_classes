@@ -204,6 +204,18 @@ console.log(isPlural("magic"))
 // fifth(1, 2, 3, 4, 5) ➞ "number"
 // fifth("a", 2, 3, true, "five") ➞ "string"
 // fifth() ➞ "Not enough arguments"
+function fifth() {
+    let stringToArray = arguments.split()
+    if (arguments == 5) {
+        return typeof(stringToArray[4])
+    } else {
+        return `Not enough arguments`
+    }
+
+}
+console.log(fifth(1, 2, 3, 4, 5))
+console.log(fifth("a", 2, 3, true, "five"))
+console.log(fifth())
 
 
 
@@ -220,6 +232,8 @@ console.log(isPlural("magic"))
 
 
 
+
+
 // 13. Days in a Month
 // Create a function that takes the month and year (as integers) and returns the number of days in that month.
 
@@ -228,6 +242,7 @@ console.log(isPlural("magic"))
 // days(4, 654) ➞ 30
 // days(2, 200) ➞ 28
 // days(2, 1000) ➞ 28
+
 
 
 // 14. Word without First Character
@@ -271,7 +286,12 @@ console.log(firstLast("Adeyemi"))
 // wumbo("I LOVE MAKING CHALLENGES") ➞ "I LOVE WAKING CHALLENGES"
 // wumbo("MEET ME IN WARSAW") ➞ "WEET WE IN WARSAW"
 // wumbo("WUMBOLOGY") ➞ "WUWBOLOGY"
-
+function wumbo(string) {
+    return replaceAll("W", "M") && replaceAll("W", "M")
+}
+console.log(wumbo("I LOVE MAKING CHALLENGES"))
+console.log(wumbo("MEET ME IN WARSAW"))
+console.log(wumbo("WUMBOLOGY"))
 
 // 17. Reverse the Order of a String
 // Create a function that takes a string as its argument and returns the string in reversed order.
@@ -299,18 +319,29 @@ console.log(reverse("Edabit is really helpful!"))
 // checkEnding("convention", "tio") ➞ false
 
 
+
+
 // 19. Return the Middle Character(s) of a String
 // Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
 
 // Sample below
 // getMiddle("test") ➞ "es"
-
 // getMiddle("testing") ➞ "t"
-
 // getMiddle("middle") ➞ "dd"
-
 // getMiddle("A") ➞ "A"
-
+function getMiddle(string) {
+    if ((string.length % 2) === 0) {
+        stringPosition = (string.length / 2) - 1
+        return string.substring(stringPosition, (stringPosition + 2))
+    } else {
+        stringPosition = (string.length - 1 ) / 2
+        return string.substring(stringPosition, (stringPosition + 1))
+    }
+ }
+ console.log(getMiddle("test")) 
+ console.log(getMiddle("testing"))
+ console.log(getMiddle("middle"))
+ console.log(getMiddle("A"))
 
 
 // 20. Is the Word Singular or Plural?
@@ -341,7 +372,16 @@ console.log(isPlural("magic"))
 // moodToday("happy") ➞ "Today, I am feeling happy"
 // moodToday("sad") ➞ "Today, I am feeling sad"
 // moodToday() ➞ "Today, I am feeling neutral"
-
+function moodToday(mood) {
+    if (mood == null) {
+        return `Today, I am feeling neutral`
+    } else {
+        return `Today, I am feeling ${mood}`
+    }
+}
+console.log(moodToday("happy"))
+console.log(moodToday("sad"))
+console.log(moodToday())
 
 
 
@@ -353,7 +393,17 @@ console.log(isPlural("magic"))
 // match("motive", "emotive") ➞ false
 // match("venom", "VENOM") ➞ true
 // match("mask", "mAskinG") ➞ false
-
+function match(string1,string2) {
+    if (string1.toUpperCase() === string2.toUpperCase()) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(match("hello", "hELLo"))
+console.log(match("motive", "emotive"))
+console.log( match("venom", "VENOM"))
+console.log(match("mask", "mAskinG"))
 
 // 23. City School Creating IDS
 // Many IDS (for emails or Google ID) are created using the person's name.
@@ -380,7 +430,11 @@ function createID(firstName, lastName) {
 // sample below
 // google("Enjoying     ") ➞ "Enjoying+++++"
 // google("Zulfah  ") ➞ "Zulfah++"
-
+function google(word) {
+    return word.replaceAll(" ", "+")
+}
+console.log(google("Enjoying     "))
+console.log(google("Zulfah  "))
 
 
 // 25. Reverse and Capitalize
@@ -431,6 +485,15 @@ console.log(isValidNumber("21F"))
 // sample below
 // isEmailValid("roshbon@gmail.com") ➞ true
 // isEmailValid("zaicongmail.com") ➞ false
+function isEmailValid(email) {
+    if (email.includes("@")) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(isEmailValid("roshbon@gmail.com"))
+console.log(isEmailValid("zaicongmail.com"))
 
 // 28. Truncate String
 // Write a JavaScript function to extract a specified number of characters from a string starting from the first character
@@ -452,10 +515,11 @@ console.log(truncateString("Ali Akerele", 2))
 //  repeat_string('Hello', 4)); "Hello Hello Hello Hello"
 //  repeat_string('Vote wisely', 2) "Vote wisely Vote wisely"
 function repeatString(string, noOfRepetition) {
-    return string.repeat(repeatString)
-}
-console.log(repeatString("Hello ", 4))
-console.log(repeatString("Vote wisely ", 2))
+    return string.repeat( noOfRepetition)
+ }
+ console.log(repeatString("Hello ", 4))
+ console.log(repeatString("Vote wisely ", 2))
+ 
 
 // 30. Hello; Hello World; World
 // Write a function that takes an integer and:
@@ -466,6 +530,17 @@ console.log(repeatString("Vote wisely ", 2))
 // helloWorld(3) ➞ "Hello"
 // helloWorld(5) ➞ "World"
 // helloWorld(15) ➞ "Hello World"
-
-
-
+function helloWorld(integer) {
+    if(integer % 3 === 0){
+        return `hello`
+    }
+    if(integer % 5 === 0){
+        return `World`
+    }
+    if(((integer % 3) && (integer % 5)) === 0){
+        return `hello World`
+    }
+}
+console.log(helloWorld(3))
+console.log(helloWorld(5))
+console.log(helloWorld(15))
