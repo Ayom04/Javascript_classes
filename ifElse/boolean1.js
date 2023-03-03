@@ -229,6 +229,18 @@ console.log(fifth())
 // journeyDistance(9) ➞ 4
 // // The first kilometer costs $3 plus the other three kilometers (costing $2 each)
 // journeyDistance(5) ➞ 2
+function journeyDistance(journeyCost) {
+    const BASE_COST = 3;
+    let costAboveBase = journeyCost - BASE_COST
+    let journeyOver1km = costAboveBase / 2
+    let totalJourneyDistance = journeyOver1km + 1
+    if (journeyCost > BASE_COST) {
+      return `You have travelled a distance of ${totalJourneyDistance}km 🚗`
+    } else {
+      return `You have travelled ${journeyCost / 3}km 🚗`
+    }
+}
+console.log(journeyDistance(5))
 
 
 
@@ -250,7 +262,7 @@ console.log(fifth())
 
 // Sample below
 // newWord("apple") ➞ "pple"
-// newWord("cherry") ➞ "herry"
+// newWord("cherry") ➞ "herry" 
 // newWord("plum") ➞ "lum"
 function newWord(word) {
     return word.substring(1)
@@ -287,11 +299,11 @@ console.log(firstLast("Adeyemi"))
 // wumbo("MEET ME IN WARSAW") ➞ "WEET WE IN WARSAW"
 // wumbo("WUMBOLOGY") ➞ "WUWBOLOGY"
 function wumbo(string) {
-    return replaceAll("W", "M") && replaceAll("W", "M")
-}
-console.log(wumbo("I LOVE MAKING CHALLENGES"))
-console.log(wumbo("MEET ME IN WARSAW"))
-console.log(wumbo("WUMBOLOGY"))
+    return string.replaceAll("M", "W") 
+ }
+ console.log(wumbo("I LOVE MAKING CHALLENGES"))
+ console.log(wumbo("MEET ME IN WARSAW"))
+ console.log(wumbo("WUMBOLOGY"))
 
 // 17. Reverse the Order of a String
 // Create a function that takes a string as its argument and returns the string in reversed order.
@@ -416,7 +428,7 @@ console.log(match("mask", "mAskinG"))
 // createID("John", "SMITH") ➞ "jSmi"
 // createID("mary", "smith") ➞ "mSmi"
 function createID(firstName, lastName) {
-    return firstName.charAt(0) + lastName.substring(0,3).toUpperCase(charAt(0))
+    return firstName.charAt(0).toLowerCase() + lastName.substring(0,3).toUpperCase(charAt(0))
  }
  console.log(createID("mary", "lamb"))
  console.log(createID("John", "SMITH"))
