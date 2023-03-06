@@ -546,11 +546,13 @@ function helloWorld(integer) {
     if(integer % 3 === 0){
         return `hello`
     }
-    if(integer % 5 === 0){
+    else if(integer % 5 === 0){
         return `World`
     }
-    if(((integer % 3) && (integer % 5)) === 0){
+    else if(((integer % 3) && (integer % 5)) === 0){
         return `hello World`
+    }else{
+        return `Not a multiple of 3 or 5`
     }
 }
 console.log(helloWorld(3))

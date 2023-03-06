@@ -191,9 +191,17 @@ console.log(typeOfParameterPassed("The man ran away"))
 // squareRoot(9) ➞ 3
 // squareRoot(16) ➞ 4
 // squareRoot(25) ➞ 5
-function squareRoot(number){
-    return number ** 0.5
-}
-console.log(squareRoot(9))
-console.log(squareRoot(16))
-console.log(squareRoot(25))
+function helloWorld(number) {
+    if(number % 3 === 0 && number % 5 === 0) {
+        return "Hello World"
+    } else if(number % 3 === 0) {
+        return "Hello"
+    } else if(number % 5 === 0) {
+        return "World"
+    } else {
+        return "Not a multiple of 3 or 5"
+    }
+  }
+  console.log(helloWorld(15))
+  console.log(helloWorld(5))
+  console.log(helloWorld(3))
