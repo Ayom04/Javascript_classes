@@ -329,6 +329,13 @@ console.log(reverse("Edabit is really helpful!"))
 // checkEnding("samurai", "zi") ➞ false
 // checkEnding("feminine", "nine") ➞ true
 // checkEnding("convention", "tio") ➞ false
+function checkEnding(string1, string2) {
+    if (string1.ends) {
+        
+    } else {
+        
+    }
+}
 
 
 
